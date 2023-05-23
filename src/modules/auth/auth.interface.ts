@@ -18,3 +18,8 @@ export interface userPayload{
   email: string,
   role: string
 }
+
+export interface userSignInPayload {
+  email: string,
+  password: string
+}

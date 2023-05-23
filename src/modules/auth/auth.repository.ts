@@ -1,24 +1,39 @@
 import sha1 from 'sha1';
-import { User, userPayload } from './auth.interface';
-import { ConflictError } from "../../commons/error";
-import userModelInstance from '../../utils/db/userdb/userdb.controller';
+import { User, userSignInPayload } from './auth.interface';
+import { AuthError, ConflictError, NotAuthorizedError } from "../../commons/error";
+import userModel from '../../utils/db/userdb/userdb.model';
 
 export default class AuthRepository {
-  private user: any;
+  private userModel = userModel;
 
-  constructor() {
-    this.user = userModelInstance;
+  public async addUser(userPayload: User) {
+    const { firstName, lastName, email, phoneNumber, password } = userPayload;
+
+    const user = await this.userModel.findOne({ email });
+    if (user) {
+      throw new ConflictError();
+    }
+
+    const hashedPassword = sha1(password);
+    const newUser = await this.userModel.create({ firstName, lastName, phoneNumber, email, password: hashedPassword });
+
+    return newUser;
   }
-  
 
-  public addUser(userPayload: User): any {
-    const {firstName, lastName, email, phoneNumber, password} = userPayload;
-    let user = this.user.findOne({email});
+  public async signUser(userPayload: userSignInPayload) {
+    const { email, password } = userPayload;
 
-    if (user) throw new ConflictError();
+    const user = await this.userModel.findOne({ email });
 
-    let newUser = this.user.create({firstName, lastName, phoneNumber, email, password: sha1(password)});
-    return newUser
+    if (!user) {
+      throw new AuthError('User does not exist');
+    }
+
+    const hashedPassword = sha1(password);
+    if (hashedPassword !== user.password) {
+      throw new NotAuthorizedError();
+    }
+
+    return user;
   }
-
 }

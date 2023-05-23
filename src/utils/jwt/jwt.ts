@@ -1,7 +1,9 @@
 import sha1 from 'sha1';
 import jwt from 'jsonwebtoken';
+import * as dotenv from 'dotenv';
 import { AuthError, InternalServerError  } from '../../commons/error';
 import { userPayload } from '../../modules/auth/auth.interface';
+dotenv.config();
 
 const secret: string | undefined = process.env.JWT_SECRET;
 
@@ -18,6 +20,13 @@ const createJWT = (user: userPayload ) => {
   return token;
 };
 
+const createShortJWT = (user: userPayload ) => {
+  const token = jwt.sign({ id: user.id, email: user.email, role: user.role}, secret, {
+    expiresIn: '10m',
+  });
+  return token;
+};
+
 const verifyJWT = (token: string): userPayload=>{
   try {
     const payload = jwt.verify(token, secret);
@@ -28,4 +37,4 @@ const verifyJWT = (token: string): userPayload=>{
   }
 }
 
-export { createJWT, comparePassword, verifyJWT };
+export { createJWT, comparePassword, verifyJWT, createShortJWT };

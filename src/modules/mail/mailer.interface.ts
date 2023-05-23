@@ -16,4 +16,3 @@ export interface EmailAttachment {
 export interface Nodemailerservice {
   sendEmail(options: EmailMessage): Promise<String>;
 }
-
