@@ -26,7 +26,7 @@ export default class AuthController {
 
   static async sendCode(req: Request, res: Response) {
     const {messageResult, infoResult} = await AuthController.authService.sendCode(req.params.token);
-    if (messageResult.status === "sent" && infoResult.messageId) {
+    if (messageResult.status && infoResult.messageId) {
       res.status(200).json({
         success: true,
         message: "Your OTP has been sent to your phone number and email. Please check your messages."

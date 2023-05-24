@@ -1,6 +1,6 @@
-import {createTransport, Transporter} from 'nodemailer';
+import { createTransport, Transporter } from 'nodemailer';
 import * as dotenv from 'dotenv';
-import { Nodemailerservice, EmailMessage, EmailSendInfo  } from './mailer.interface';
+import { Nodemailerservice, EmailMessage, EmailSendInfo } from './mailer.interface';
 import logger from '../../utils/logging/logger';
 
 dotenv.config();
@@ -11,8 +11,8 @@ const transporter: Transporter = createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.NODEMAILER_EMAIL,
-    pass: process.env.NODEMAILER_AUTH
+    user: process.env.NODEMAILER_EMAIL, // SMTP email address
+    pass: process.env.NODEMAILER_AUTH // SMTP email password or app password
   }
 });
 
@@ -20,13 +20,13 @@ export default class NodemailerserviceImplement implements Nodemailerservice {
   private transporter: Transporter;
 
   constructor() {
-    this.transporter = transporter;
+    this.transporter = transporter; // Assign the created transporter to the instance variable
   }
 
   async sendEmail(options: EmailMessage): Promise<EmailSendInfo> {
-    try{
-      return await this.transporter.sendMail(options);
-    } catch(e: any) {
+    try {
+      return await this.transporter.sendMail(options); // Send the email using the transporter
+    } catch (e: any) {
       logger.error(e);
       throw new Error(e);
     }

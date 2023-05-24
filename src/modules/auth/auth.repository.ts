@@ -71,7 +71,7 @@ export default class AuthRepository {
     };
     const messageResult = await this.twilioServive.twilioSendMessage({body: `Your OTP is: ${otp}. Please use this OTP to proceed`, from: process.env.TWILIO_PHONE, to: user.phoneNumber});
     const infoResult = await this.nodemailerService.sendEmail(mailOptions);
-    await otpModel.create({phoneNumber: user.phoneNumber, code: otp.toString()});
+    await this.otpModel.create({phoneNumber: user.phoneNumber, code: otp.toString()});
     return {messageResult, infoResult};
   }
 
@@ -81,10 +81,11 @@ export default class AuthRepository {
     if (!user) throw new AuthError('User does not exist');
     const gottenCode = await this.otpModel.findOne({code: code, phoneNumber: user.phoneNumber});
     if (!gottenCode) throw new AuthError('OTP code is not correct');
-    await userModel.updateOne(
+    await this.userModel.updateOne(
       {email: user.email},
-      {$set: { verified: true }}
+      {$setOnInsert: { verified: true }}
     )
+    await this.otpModel.deleteMany({phoneNumber: user.phoneNumber});
     return true;
   }
 }
