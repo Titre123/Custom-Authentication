@@ -19,6 +19,7 @@ export default class TwilioConfig {
 
   public async twilioSendMessage(message: TwilioMessage) {
     const messageResult: TwilioMessageResult = await twilioSendMessage(message, this.client);
+    return messageResult;
   }
 
 }

@@ -7,7 +7,7 @@ export interface TwilioClient {
 export interface TwilioMessage {
   body: string;
   to: string;
-  from: string;
+  from: string | undefined;
 }
 
 export interface TwilioMessageResult {

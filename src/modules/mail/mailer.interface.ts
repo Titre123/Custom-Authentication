@@ -14,5 +14,12 @@ export interface EmailAttachment {
 }
 
 export interface Nodemailerservice {
-  sendEmail(options: EmailMessage): Promise<String>;
+  sendEmail(options: EmailMessage): Promise<EmailSendInfo>;
+}
+
+export interface EmailSendInfo {
+  messageId: string;
+  accepted: string[];
+  rejected: string[];
+  response: string;
 }
