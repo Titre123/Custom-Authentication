@@ -9,6 +9,12 @@ export class SignIn {
   'password': string;
 }
 
+export class ValidateCode {
+  @IsString()
+  @Length(6)
+  'code': number;
+}
+
 export class SignUp extends SignIn {
   @IsString()
   'firstName': string;
@@ -18,5 +24,4 @@ export class SignUp extends SignIn {
 
   @IsPhoneNumber()
   'phoneNumber': string;
-
 }

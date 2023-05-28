@@ -594,3 +594,127 @@
 [31m    at Function.Module._load (node:internal/modules/cjs/loader:839:12)[39m
 [31m    at Module.require (node:internal/modules/cjs/loader:1028:19)[39m
 [31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+2023-05-24 19:48:58 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m5[0m   email: string;[39m
+[31m[7m [0m [91m  ~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m9[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m9[0m   password: string;[39m
+[31m[7m [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'code' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m14[0m   code: number;[39m
+[31m[7m  [0m [91m  ~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'firstName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m19[0m   firstName: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m22[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'lastName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m22[0m   lastName :string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'phoneNumber' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m25[0m   phoneNumber: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m5[0m   email: string;[39m
+[31m[7m [0m [91m  ~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m9[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m9[0m   password: string;[39m
+[31m[7m [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'code' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m14[0m   code: number;[39m
+[31m[7m  [0m [91m  ~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'firstName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m19[0m   firstName: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m22[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'lastName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m22[0m   lastName :string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'phoneNumber' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m25[0m   phoneNumber: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~~~[0m[39m
+
+[31m    at createTSError (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:859:12)[39m
+[31m    at reportTSError (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:863:19)[39m
+[31m    at getOutput (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1077:36)[39m
+[31m    at Object.compile (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1433:41)[39m
+[31m    at Module.m._compile (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1617:30)[39m
+[31m    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1004:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:839:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:1028:19)[39m
+2023-05-24 19:48:58 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m5[0m   email: string;[39m
+[31m[7m [0m [91m  ~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m9[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m9[0m   password: string;[39m
+[31m[7m [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'code' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m14[0m   code: number;[39m
+[31m[7m  [0m [91m  ~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'firstName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m19[0m   firstName: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m22[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'lastName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m22[0m   lastName :string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'phoneNumber' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m25[0m   phoneNumber: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m5[0m   email: string;[39m
+[31m[7m [0m [91m  ~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m9[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m9[0m   password: string;[39m
+[31m[7m [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'code' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m14[0m   code: number;[39m
+[31m[7m  [0m [91m  ~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'firstName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m19[0m   firstName: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m22[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'lastName' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m22[0m   lastName :string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~[0m[39m
+[31m[96msrc/modules/auth/auth.validation.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'phoneNumber' has no initializer and is not definitely assigned in the constructor.[39m
+
+[31m[7m25[0m   phoneNumber: string;[39m
+[31m[7m  [0m [91m  ~~~~~~~~~~~[0m[39m
+
+[31m    at createTSError (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:859:12)[39m
+[31m    at reportTSError (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:863:19)[39m
+[31m    at getOutput (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1077:36)[39m
+[31m    at Object.compile (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1433:41)[39m
+[31m    at Module.m._compile (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1617:30)[39m
+[31m    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (C:\Users\user\Custom-Authentication\node_modules\ts-node\src\index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1004:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:839:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:1028:19)[39m
